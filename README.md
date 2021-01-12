@@ -1,3 +1,11 @@
+# Face Detections API
+
+I used clarifai's face detection services: Here is some documentation:
+
+<https://www.clarifai.com/models/face-detection>
+**List of different models Clarifai provides** 
+<https://www.clarifai.com/model-gallery>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
