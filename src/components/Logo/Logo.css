@@ -1,4 +1,8 @@
 .Tilt {
-    background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+    background: linear-gradient(89deg, #fd842d 0%, #ffda41 100%);
+}
 
+.Tilt-inner {
+    width: 80%;
+    height: auto;
 }
