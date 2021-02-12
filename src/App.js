@@ -7,15 +7,11 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import Signin from './components/Signin/Signin'
 import Register from './components/Register/Register'
 // import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
+
 import './App.css';
 
 
 
-//the api key is specific to my project
-const app = new Clarifai.App({
-    apiKey: 'bed40e47ee3847d6b04173ee62f2fcfd'
-});
 
 // const particleOptions = {
 //     'particles': {
@@ -95,12 +91,14 @@ class App extends Component {
 
     onButtonSubmit = () => {
         this.setState({imageUrl: this.state.input});
-        console.log('click');
-        app.models
-            .predict(
-                Clarifai.FACE_DETECT_MODEL,
-                this.state.input)
-                 //this.calculateFaceLocation(response) returns the box parameter we need to display
+            fetch('http://localhost:3000/imageurl', {
+                method: 'post',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    input: this.state.input
+                })
+            })
+                .then(response => response.json())
                 .then(response => {
                     if(response) {
                         fetch('http://localhost:3000/image', {
