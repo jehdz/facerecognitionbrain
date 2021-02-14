@@ -6,24 +6,24 @@ import Rank from './components/Rank/Rank'
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import Signin from './components/Signin/Signin'
 import Register from './components/Register/Register'
-// import Particles from 'react-particles-js';
+import Particles from 'react-particles-js';
 
 import './App.css';
 
 
 
 
-// const particleOptions = {
-//     'particles': {
-//         'number': {
-//             'value': 30,
-//             'density': {
-//                 'enable': true,
-//                 'value_area': 150
-//             }
-//         }
-//     }
-// }
+const particleOptions = {
+    'particles': {
+        'number': {
+            'value': 30,
+            'density': {
+                'enable': true,
+                'value_area': 150
+            }
+        }
+    }
+}
 
 
 const initialState = {
@@ -134,9 +134,9 @@ render() {
         const { isSignedIn, imageUrl, route, box } = this.state;
     return (
         <div className="App">
-            {/*<Particles className="particles"*/}
-            {/*    params={particleOptions}*/}
-            {/*/>*/}
+            <Particles className="particles"
+                params={particleOptions}
+            />
             <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
             {route === 'home'
                 ? <div>

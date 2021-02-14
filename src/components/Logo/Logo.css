@@ -1,5 +1,6 @@
 .Tilt {
-    background: linear-gradient(89deg, #fd842d 0%, #ffda41 100%);
+    /*background: linear-gradient(89deg, #fd842d 0%, #ffda41 100%);*/
+    background: linear-gradient(89deg, #0093E9 0%, #80D0C7 100%);
 }
 
 .Tilt-inner {
