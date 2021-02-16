@@ -4,7 +4,7 @@
 
 ### Front-end 
 1. React 
-2. Partclies.js - Moving particles effect 
+2. Particles.js - Moving particles effect 
 3. React tilt 
 4. Tachyons - CSS library 
 5. Clarifai face detection API
